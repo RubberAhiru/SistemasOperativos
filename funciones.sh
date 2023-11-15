@@ -104,14 +104,37 @@ menucrontab() {
 	#bash respaldo.sh
 #}
 
-#auditar() {
+auditar() {
+	echo -e "Ingrese una de las siguientes opciones y presione enter:\n
+  1 - Mostrar usuarios conectados en el sistema\n
+ 	2 - Mostrar usuarios conectados en el sistema y lo que esten haciendo\n
+ 	3 - Mostrar ultima conexion de todos los usuarios\n
+ 	4 - Mostrar intentos fallidos de conexion
+ 	5 - Salir"
+ 	read op
+ 	
+ 	case $op in
 
-#}
+      1)
+        who
+        echo "\n"
+      ;;
+      2)
+        w
+        echo 
+      ;;
+      3)
+				lastlog
+				echo "\n"-
+      ;;
+      4)
+				lastb
+				echo "\n"
+			;;
+			5)
+			;;	
 
-#menufirewall() {
+    esac
 
-#}
+}
 
-#menussh() {
-
-#}
